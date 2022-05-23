@@ -4,7 +4,6 @@ import React from "react";
 import Styles from "./Styles";
 import { Field } from "react-final-form";
 import Wizard from "./Wizard";
-// import database from './firebase';
 import database from "../database/Firebase";
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -60,17 +59,7 @@ const QuizApp = () => (
           />
           <Error name="email" />
         </div>
-        {/* <div>
-          <label>Quiz Name</label>
-          <Field
-            name="quizName"
-            component="input"
-            type="text"
-            placeholder="Quiz Name"
-            validate={required}
-          />
-          <Error name="quizName" />
-        </div> */}
+
         <div>
           <label>First Name</label>
           <Field
@@ -100,7 +89,7 @@ const QuizApp = () => (
 
           if (!values.mobileNumber) {
             errors.mobileNumber = "Required";
-          } else if (values.mobileNumber.length <10) {
+          } else if (values.mobileNumber.length < 10) {
             errors.mobileNumber = "Input 10 digits";
           }
 

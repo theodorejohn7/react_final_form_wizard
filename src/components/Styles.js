@@ -1,8 +1,11 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from "styled-components";
 
 const btn = (light, dark) => css`
   white-space: nowrap;
   display: inline-block;
+  box-shadow: 0px 15px 50px 10px rgba(0, 0, 0, 0.75);
+  text-shadow: 5px 1px 5px rgba(0, 0, 0, 0.54);
+
   border-radius: 5px;
   padding: 5px 15px;
   font-size: 16px;
@@ -25,21 +28,30 @@ const btn = (light, dark) => css`
     opacity: 0.6;
     cursor: not-allowed;
   }
-`
+`;
 
 const btnDefault = css`
-  ${btn('#ffffff', '#d5d5d5')} color: #555;
-`
+  ${btn("#ffffff", "#d5d5d5")} color: #555;
+`;
 
-const btnPrimary = btn('#4f93ce', '#285f8f')
-const btnDanger = btn('#e27c79', '#c9302c')
+const btnPrimary = btn("#4f93ce", "#285f8f");
+const btnDanger = btn("#e27c79", "#c9302c");
 
 export default styled.div`
   font-family: sans-serif;
 
   h1 {
-    text-align: center;
-    color: #222;
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background: skyblue;
+    box-shadow: 0px 0px 30px 15px rgba(0, 0, 0, 0.59);
+    text-shadow: 5px 1px 5px rgba(00, 0, 0, 0.54);
+
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
   }
 
   h2 {
@@ -72,14 +84,17 @@ export default styled.div`
     border: 1px solid #ccc;
     padding: 20px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    border-radius: 3px;
+    border-radius: 8px;
+    box-shadow: 10px 10px 151px 25px rgba(0, 0, 100, 0.59);
+    border: 5px double #ff6550;
+    background: #ffffff;
     position: relative;
 
     .loading {
       text-align: center;
       display: block;
       position: absolute;
-      background: url('https://media.giphy.com/media/130AxGoOaR6t0I/giphy.gif')
+      background: url("https://media.giphy.com/media/130AxGoOaR6t0I/giphy.gif")
         center center;
       background-size: fill;
       font-size: 2em;
@@ -101,6 +116,9 @@ export default styled.div`
         color: #333;
         width: 110px;
         min-width: 60px;
+        box-shadow: 3px 10px 35px 12px rgba(0, 0, 0, 0.45);
+        border-radius: 12px;
+        padding: 12px;
         font-size: 1em;
         line-height: 32px;
       }
@@ -108,13 +126,17 @@ export default styled.div`
       & > select,
       & > textarea {
         flex: 1;
-        padding: 3px 5px;
+        padding: 10px 5px;
         font-size: 1em;
         margin-left: 15px;
+        margin-top: 10px;
         border: 1px solid #ccc;
-        border-radius: 3px;
+
+        box-shadow: 3px 10px 35px 14px rgba(0, 0, 0, 0.45);
+
+        border-radius: 30px;
       }
-      & > input[type='checkbox'] {
+      & > input[type="checkbox"] {
         margin-top: 7px;
       }
       & > div {
@@ -160,11 +182,11 @@ export default styled.div`
   }
   button {
     margin: 0 10px;
-    &[type='submit'] {
+    &[type="submit"] {
       ${btnPrimary};
     }
-    &[type='button'] {
+    &[type="button"] {
       ${btnDefault};
     }
   }
-`
+`;
