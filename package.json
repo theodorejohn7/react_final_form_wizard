@@ -11,13 +11,13 @@
   ],
   "main": "index.js",
   "dependencies": {
+    "final-form": "latest",
     "prop-types": "latest",
-    "styled-components": "latest",
-    "react-final-form": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-final-form": "latest",
     "react-scripts": "3.0.1",
-    "final-form": "latest"
+    "styled-components": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -32,6 +32,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "react-scripts": "1.0.0"
+    "react-scripts": "1.0.0",
+    "sonarqube-scanner": "^2.8.1"
   }
 }

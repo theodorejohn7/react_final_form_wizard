@@ -61,7 +61,7 @@ export default class Wizard extends React.Component {
         validate={this.validate}
         onSubmit={this.handleSubmit}
       >
-        {({ handleSubmit, submitting, values }) => (
+        {({ handleSubmit, submitting, _values }) => (
           <form onSubmit={handleSubmit}>
             {activePage}
             <div className="buttons">
